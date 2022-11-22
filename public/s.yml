@@ -8,7 +8,7 @@ proxies:
   - {name: 'amazonray', server: 18.167.7.80, port: 80, type: vmess, uuid: 2599b1fc-ed95-4ab0-df04-ca5afc0fffe3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
   - {name: 'googleray', server: 13.33.99.105, port: 80, type: vmess, uuid: 2599b1fc-ed95-4ab0-df04-ca5afc0fffe3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray, headers: {Host: d3ixfxzpzxxrtv.cloudfront.net}}, udp: true}
   - {name: 'amd', server: 146.56.165.56, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray, headers: {Host: amd.dago.buzz}}, udp: true}
-  - {name: 'cft', server: 13.33.35.45, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray, headers: {Host: d2egbgga6a6p7i.cloudfront.net}}, udp: true}
+  - {name: 'cft', server: 13.33.215.111, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray, headers: {Host: d2egbgga6a6p7i.cloudfront.net}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
