@@ -6,7 +6,7 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - {name: 'amazonray', server: 18.167.7.80, port: 80, type: vmess, uuid: 2599b1fc-ed95-4ab0-df04-ca5afc0fffe3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
-  - {name: 'googleray', server: 35.241.116.47, port: 80, type: vmess, uuid: 5f434657-2630-4962-9cc0-5b7d7e028e55, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
+  - {name: 'googleray', server: 13.33.215.111, port: 80, type: vmess, uuid: 5f434657-2630-4962-9cc0-5b7d7e028e55, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray,headers: {Host: d3ixfxzpzxxrtv.cloudfront.net}}, udp: true}
   - {name: 'amd', server: 146.56.165.56, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray, headers: {Host: amd.dago.buzz}}, udp: true}
   - {name: 'cft', server: 13.33.215.111, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray, headers: {Host: d2egbgga6a6p7i.cloudfront.net}}, udp: true}
 proxy-groups:
