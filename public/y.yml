@@ -8,6 +8,7 @@ proxies:
   - {name: 'originray', server: 8.219.255.41, port: 80, type: vmess, uuid: ca4aae5f-54d3-44f7-ac77-4402afc572b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
   - {name: 'amazonray', server: 13.33.99.105, port: 80, type: vmess, uuid: ca4aae5f-54d3-44f7-ac77-4402afc572b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray, headers: {Host: d2x851w31o73t0.cloudfront.net}}, udp: true}
   - {name: 'gcoreray', server: 5.252.26.8, port: 80, type: vmess, uuid: ca4aae5f-54d3-44f7-ac77-4402afc572b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray , headers: {Host: gcore.dago.buzz}}, udp: true}
+  - {name: 'amdray', server: 146.56.165.56, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray, headers: {Host: amd.dago.buzz}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -17,6 +18,7 @@ proxy-groups:
       - originray
       - amazonray
       - gcoreray
+      - amdray
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -25,6 +27,7 @@ proxy-groups:
       - originray
       - amazonray
       - gcoreray
+      - amdray
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -34,6 +37,7 @@ proxy-groups:
       - originray
       - amazonray
       - gcoreray
+      - amdray
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -42,6 +46,7 @@ proxy-groups:
       - originray
       - amazonray
       - gcoreray
+      - amdray
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -50,6 +55,7 @@ proxy-groups:
       - originray
       - amazonray
       - gcoreray
+      - amdray
   - name: 📲 电报信息
     type: select
     proxies:
@@ -58,6 +64,7 @@ proxy-groups:
       - originray
       - amazonray
       - gcoreray
+      - amdray
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -67,6 +74,7 @@ proxy-groups:
       - originray
       - amazonray
       - gcoreray
+      - amdray
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -85,6 +93,7 @@ proxy-groups:
       - originray
       - amazonray
       - gcoreray
+      - amdray
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
