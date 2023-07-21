@@ -1,4 +1,34 @@
 <template>
+  <el-row>
+      <el-col :span="6">
+        <el-statistic title="Daily active users" :value="268500" />
+      </el-col>
+      <el-col :span="6">
+        <el-statistic :value="138">
+          <template #title>
+            <div style="display: inline-flex; align-items: center">
+              Ratio of men to women
+              <el-icon style="margin-left: 4px" :size="12">
+                <Male />
+              </el-icon>
+            </div>
+          </template>
+          <template #suffix>/100</template>
+        </el-statistic>
+      </el-col>
+      <el-col :span="6">
+        <el-statistic title="Total Transactions" :value="172000" />
+      </el-col>
+      <el-col :span="6">
+        <el-statistic title="Feedback number" :value="562">
+          <template #suffix>
+            <el-icon style="vertical-align: -0.125em">
+              <ChatLineRound />
+            </el-icon>
+          </template>
+        </el-statistic>
+      </el-col>
+    </el-row>
   <el-upload action='' drag :auto-upload="false" :on-change="uploadChange" :limit="1">
     <i class="el-icon-upload"></i>
     <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
@@ -7,10 +37,10 @@
 </template>
 <script setup>
 import * as xlsx from "xlsx"
-import * as echarts from 'echarts'
 import { readFile, dealdate } from './utils/index'
 import { reactive, ref } from 'vue'
 import LineCharts from './components/LineCharts.vue'
+import { ChatLineRound, Male } from '@element-plus/icons-vue'
 
 const uploadChange = async (file) => {
   let dataBinary = await readFile(file.raw)
@@ -106,3 +136,8 @@ const option = reactive({
 })
 
 </script>
+<style scoped>
+.el-col {
+  text-align: center;
+}
+</style>
