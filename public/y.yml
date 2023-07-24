@@ -14,6 +14,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - tecray
       - originray
       - amdray
   - name: ♻️ 自动选择
@@ -21,6 +22,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - tecray
       - originray
       - amdray
   - name: 🌍 国外媒体
@@ -29,6 +31,7 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - tecray
       - originray
       - amdray
   - name: 🌏 国内媒体
@@ -36,6 +39,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - tecray
       - originray
       - amdray
   - name: Ⓜ️ 微软服务
@@ -43,6 +47,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - tecray
       - originray
       - amdray
   - name: 📲 电报信息
@@ -50,6 +55,7 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - tecray
       - originray
       - amdray
   - name: 🍎 苹果服务
@@ -58,6 +64,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - tecray
       - originray
       - amdray
   - name: 🎯 全球直连
@@ -75,6 +82,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - tecray
       - originray
       - amdray
 rules:
