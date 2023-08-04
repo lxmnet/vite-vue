@@ -5,8 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - {name: 'tecray', server: 43.133.12.169, port: 54494, type: vmess, uuid: c515eae1-a0a2-441e-d53c-298f05544d66, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /c515eae1}, udp: true}
+  - {name: 'tecray', server: 43.134.3.149, port: 80, type: vmess, uuid: b9c388c3-86a5-4011-bda0-3364b539d56f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
   - {name: 'amdray', server: 146.56.165.56, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
+  - {name: 'tecray2', server: 43.133.12.169, port: 54494, type: vmess, uuid: c515eae1-a0a2-441e-d53c-298f05544d66, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /c515eae1}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -15,6 +16,7 @@ proxy-groups:
       - 🎯 全球直连
       - tecray
       - amdray
+      - tecray2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -22,6 +24,7 @@ proxy-groups:
     proxies:
       - tecray
       - amdray
+      - tecray2
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -30,6 +33,7 @@ proxy-groups:
       - 🎯 全球直连
       - tecray
       - amdray
+      - tecray2
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -37,6 +41,7 @@ proxy-groups:
       - 🔰 节点选择
       - tecray
       - amdray
+      - tecray2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -44,6 +49,7 @@ proxy-groups:
       - 🔰 节点选择
       - tecray
       - amdray
+      - tecray2
   - name: 📲 电报信息
     type: select
     proxies:
@@ -51,6 +57,7 @@ proxy-groups:
       - 🎯 全球直连
       - tecray
       - amdray
+      - tecray2
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -59,6 +66,7 @@ proxy-groups:
       - ♻️ 自动选择
       - tecray
       - amdray
+      - tecray2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -76,6 +84,7 @@ proxy-groups:
       - ♻️ 自动选择
       - tecray
       - amdray
+      - tecray2
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
