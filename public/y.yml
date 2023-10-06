@@ -6,7 +6,7 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - {name: 'tecray', server: buyvm.longdada.me, port: 80, type: vmess, uuid: e72dfa89-441c-46cb-b4dc-e40fcaa43927, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
-  - {name: 'amdray', server: 146.56.165.56, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
+  - {name: 'amdray', server: amdcdn.longdada.me, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
