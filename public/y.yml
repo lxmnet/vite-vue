@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
+  - {name: 'aliray', server: 8.219.255.41, port: 80, type: vmess, uuid: 0f5040bd-3235-4ce3-9246-364144c6c4e8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
   - {name: 'tecray', server: 45.61.186.155, port: 80, type: vmess, uuid: e72dfa89-441c-46cb-b4dc-e40fcaa43927, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
   - {name: 'amdray', server: 146.56.165.56, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
 proxy-groups:
@@ -13,6 +14,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - aliray
       - tecray
       - amdray
   - name: ♻️ 自动选择
@@ -20,6 +22,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - aliray
       - tecray
       - amdray
   - name: 🌍 国外媒体
@@ -28,6 +31,7 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - aliray
       - tecray
       - amdray
   - name: 🌏 国内媒体
@@ -35,6 +39,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - aliray
       - tecray
       - amdray
   - name: Ⓜ️ 微软服务
@@ -42,6 +47,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - aliray
       - tecray
       - amdray
   - name: 📲 电报信息
@@ -49,6 +55,7 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - aliray
       - tecray
       - amdray
   - name: 🍎 苹果服务
@@ -57,6 +64,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - aliray
       - tecray
       - amdray
   - name: 🎯 全球直连
@@ -74,6 +82,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - aliray
       - tecray
       - amdray
 rules:
