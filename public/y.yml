@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - {name: 'tecray', server: 8.219.255.41, port: 80, type: vmess, uuid: 0f5040bd-3235-4ce3-9246-364144c6c4e8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
+  - {name: 'tecray', server: 45.61.186.155, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
   - {name: 'amdray', server: 146.56.165.56, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
