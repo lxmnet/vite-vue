@@ -5,16 +5,16 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - {name: 'aliray', server: 58.87.91.102, port: 80, type: vmess, uuid: 36bcc42f-7359-4eb3-a569-e24394e9308c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
-  - {name: 'tecray', server: 45.61.186.155, port: 80, type: vmess, uuid: e72dfa89-441c-46cb-b4dc-e40fcaa43927, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
-  - {name: 'amdray', server: 146.56.165.56, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
+  - {name: armray, server: 146.56.153.47, port: 30443, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
+  - {name: tecray, server: 165.140.240.81, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
+  - {name: amdray, server: 193.122.111.210, port: 80, type: vmess, uuid: c3b8d784-b1b9-4603-e8e3-db35ab89f923, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ray}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - aliray
+      - armray
       - tecray
       - amdray
   - name: ♻️ 自动选择
@@ -22,7 +22,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - aliray
+      - armray
       - tecray
       - amdray
   - name: 🌍 国外媒体
@@ -31,7 +31,7 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - aliray
+      - armray
       - tecray
       - amdray
   - name: 🌏 国内媒体
@@ -39,7 +39,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - aliray
+      - armray
       - tecray
       - amdray
   - name: Ⓜ️ 微软服务
@@ -47,7 +47,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - aliray
+      - armray
       - tecray
       - amdray
   - name: 📲 电报信息
@@ -55,7 +55,7 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - aliray
+      - armray
       - tecray
       - amdray
   - name: 🍎 苹果服务
@@ -64,7 +64,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - aliray
+      - armray
       - tecray
       - amdray
   - name: 🎯 全球直连
@@ -82,7 +82,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - aliray
+      - armray
       - tecray
       - amdray
 rules:
